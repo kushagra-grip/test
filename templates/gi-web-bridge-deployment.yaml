@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gi-web-bridge
+spec:
+  selector:
+    matchLabels:
+      app: gi-web-bridge
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gi-web-bridge
+    spec:
+      containers:
+      - name: gi-web-bridge
+        image: gi-web-bridge
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3002

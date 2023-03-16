@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gi-external-bridge
+spec:
+  selector:
+    matchLabels:
+      app: gi-external-bridge
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gi-external-bridge
+    spec:
+      containers:
+      - name: gi-external-bridge
+        image: gi-external-bridge
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3001

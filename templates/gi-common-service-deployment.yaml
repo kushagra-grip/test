@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gi-common-service
+spec:
+  selector:
+    matchLabels:
+      app: gi-common-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gi-common-service
+    spec:
+      containers:
+      - name: gi-common-service
+        image: gi-common-service
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3003
