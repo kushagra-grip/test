@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gi-client-web
+spec:
+  selector:
+    matchLabels:
+      app: gi-client-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gi-client-web
+    spec:
+      containers:
+      - name: gi-client-web
+        image: gi-client-web
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 3000

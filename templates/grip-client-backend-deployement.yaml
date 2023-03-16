@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grip-client-backend
+spec:
+  selector:
+    matchLabels:
+      app: grip-client-backend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grip-client-backend
+    spec:
+      containers:
+      - name: grip-client-backend
+        image: grip-client-backend
+        resources:
+          limits:
+            memory: "64Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 4000
