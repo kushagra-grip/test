@@ -15,6 +15,7 @@ spec:
       containers:
       - name: gi-client-web
         image: gi-client-web
+        imagePullPolicy: Never
         resources:
           limits:
             memory: "64Mi"

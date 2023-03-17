@@ -15,6 +15,7 @@ spec:
       containers:
       - name: grip-client-backend
         image: grip-client-backend
+        imagePullPolicy: Never
         resources:
           limits:
             memory: "64Mi"

@@ -15,6 +15,7 @@ spec:
       containers:
       - name: gi-common-service
         image: gi-common-service
+        imagePullPolicy: Never
         resources:
           limits:
             memory: "64Mi"
