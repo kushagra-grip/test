@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: grip-client-backend
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: grip-client-backend
   ports:

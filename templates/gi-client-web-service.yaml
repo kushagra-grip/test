@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: gi-client-web
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: gi-client-web
   ports:
