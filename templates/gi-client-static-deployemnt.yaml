@@ -1,24 +1,24 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: gi-client-static
-spec:
-  selector:
-    matchLabels:
-      app: gi-client-static
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: gi-client-static
-    spec:
-      containers:
-      - name: gi-client-static
-        image: gi-client-static
-        imagePullPolicy: Never
-        resources:
-          limits:
-            memory: "1500Mi"
-            cpu: "700m"
-        ports:
-        - containerPort: 3000
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: gi-client-static
+# spec:
+#   selector:
+#     matchLabels:
+#       app: gi-client-static
+#   replicas: 1
+#   template:
+#     metadata:
+#       labels:
+#         app: gi-client-static
+#     spec:
+#       containers:
+#       - name: gi-client-static
+#         image: gi-client-static
+#         imagePullPolicy: Never
+#         resources:
+#           limits:
+#             memory: "1500Mi"
+#             cpu: "700m"
+#         ports:
+#         - containerPort: 3000
