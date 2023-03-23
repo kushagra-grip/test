@@ -76,10 +76,59 @@ spec:
       #       name: gi-client-web
       #       port:
       #         number: 3000
-      - path: /
+      - path: /_next
         pathType: Prefix
         backend:
           service:
             name: gi-client-web
+            port:
+              number: 3000
+      - path: /login
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /assets
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /portfolio
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /vault
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /profile
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /logout
+        pathType: Prefix
+        backend:
+          service:
+            name: gi-client-web
+            port:
+              number: 3000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: grip-client-web
             port:
               number: 3000
