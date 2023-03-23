@@ -41,6 +41,13 @@ spec:
             name: grip-client-web
             port:
               number: 8081
+      - path: /health
+        pathType: Prefix
+        backend:
+          service:
+            name: grip-client-web
+            port:
+              number: 8081
       - path: /payment-processing
         pathType: Prefix
         backend:
@@ -48,6 +55,27 @@ spec:
             name: grip-client-web
             port:
               number: 8081
+      # - path: /wallet-processing
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: grip-client-web
+      #       port:
+      #         number: 8081
+      # - path: /autoinvest-processing
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: grip-client-web
+      #       port:
+      #         number: 8081
+      # - path: /login
+      #   pathType: Prefix
+      #   backend:
+      #     service:
+      #       name: gi-client-web
+      #       port:
+      #         number: 3000
       - path: /
         pathType: Prefix
         backend:
